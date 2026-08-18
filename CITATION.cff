@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use MuellerPT, please cite the software and the associated paper."
+title: "MuellerPT"
+type: software
+license: MIT
+
+authors:
+  - family-names: "Tlemsani"
+    given-names: "Adam"
+  - family-names: "Li"
+    given-names: "Yingdian"
+  - family-names: "Giot"
+    given-names: "Maxime"
+  - family-names: "Slim"
+    given-names: "Naim"
+  - family-names: "Peters"
+    given-names: "Christopher J."
+  - family-names: "Ghosh"
+    given-names: "Abhijeet"
+  - family-names: "Elson"
+    given-names: "Daniel S."
+
+repository-code: "https://github.com/adamt222/MuellerPT"
+version: "0.1.0"
+date-released: "2026-08-10"
+
+keywords:
+  - Mueller matrix imaging
+  - self-supervised learning
+  - medical image analysis
+
+preferred-citation:
+  type: conference-paper
+  title: "MuellerPT: Decomposition Driven Pretraining for Dense Learning in Mueller Polarimetry"
+  authors:
+    - family-names: "Tlemsani"
+      given-names: "Adam"
+    - family-names: "Li"
+      given-names: "Yingdian"
+    - family-names: "Giot"
+      given-names: "Maxime"
+    - family-names: "Slim"
+      given-names: "Naim"
+    - family-names: "Peters"
+      given-names: "Christopher J."
+    - family-names: "Ghosh"
+      given-names: "Abhijeet"
+    - family-names: "Elson"
+      given-names: "Daniel S."
+  collection-title: "Medical Image Computing and Computer Assisted Intervention – MICCAI 2026"
+  year: 2026
+  doi: "10.48550/arXiv.2605.23840"
+  url: "https://arxiv.org/abs/2605.23840"
