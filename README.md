@@ -75,7 +75,7 @@ Dataset sources:
 
 - [ColoPola (Zenodo, DOI 10.5281/zenodo.10554304)](https://doi.org/10.5281/zenodo.10554304)
 - [PoLambRimetry (University of Cantabria dataset record)](https://web.unican.es/portal-investigador/en/datasets/dataset-detail?ds=DTS23011)
-- [MAP-Org description in the MuellerPT paper](https://arxiv.org/abs/2605.23840). A separate stable archive URL was not publicly indexed when this README was prepared; add the archive link here when it is released.
+- [MAP-Org (Zenodo, DOI 10.5281/zenodo.20274683)](https://doi.org/10.5281/zenodo.20274683)
 
 ## Reproduce the paper experiments
 
