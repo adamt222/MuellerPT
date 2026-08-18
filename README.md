@@ -10,7 +10,7 @@ The code is intentionally publication-focused. Pretraining contains only the pro
 pretraining/                 Shared MuellerPT encoder and pretraining code
 experiments/colopola/        Cancer classification experiment
 experiments/polambrimetry/   Grey/white-matter segmentation experiment
-scripts/                     Exact paper reproduction launchers
+scripts/                     Paper experiment launchers
 results/reference_tables/    Sanitized aggregate paper results
 tests/                       Portable repository tests
 ```
@@ -33,11 +33,7 @@ For development and tests:
 .venv/bin/python -m pytest -q
 ```
 
-The last local validation used Ubuntu Linux, Python 3.12.3, PyTorch
-2.10.0+cu128, torchvision 0.25.0+cu128, CUDA 12.8, cuDNN 9.1, timm 1.0.24,
-NumPy 1.26.4, h5py 3.15.1, and an NVIDIA RTX 4070 Ti SUPER. The pinned
-requirements are the supported reference environment; other compatible CUDA
-and CPU builds may also work.
+Tested on Ubuntu with Python 3.12.3, PyTorch 2.10.0, and CUDA 12.8.
 
 ## Data and output locations
 
@@ -109,14 +105,11 @@ Reference aggregate tables are provided in [`results/reference_tables`](results/
 
 ## Reproducibility expectations
 
-The launchers reproduce the published protocols, not guaranteed bit-for-bit
-metric values. Training remains stochastic because of initialization, data
-sampling and augmentation, and hardware- or library-dependent GPU kernels.
-PoLambRimetry enables deterministic settings where supported, but PyTorch may
-warn and continue when a CUDA operation has no deterministic implementation.
-Fresh means and standard deviations are therefore not expected to match the
-reference tables exactly; compare the aggregate trend and sampling variation,
-and record the software and hardware environment used.
+The scripts reproduce the experimental protocol. Results may vary because of
+random initialization, data sampling, augmentation, and hardware-dependent GPU
+operations. PoLambRimetry enables deterministic settings where supported, but
+not every CUDA operation has a deterministic implementation. Exact agreement
+with the reference values is therefore not expected.
 
 ## Pretraining
 
@@ -124,7 +117,7 @@ From the repository root:
 
 ```bash
 export MUELLERPT_INPUT_ROOT=/path/to/prepared/data
-export MUELLERPT_OUTPUT_ROOT=/path/on/mounted/drive/
+export MUELLERPT_OUTPUT_ROOT=/path/on/mounted/drive/MuellerPT
 export PYTHON_BIN="$PWD/.venv/bin/python"
 
 # Run this once only if *_filtered_decomp.npz sidecars are absent.

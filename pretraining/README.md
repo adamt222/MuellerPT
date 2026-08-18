@@ -7,11 +7,9 @@ corruption policies, and diagnostic plotting are intentionally omitted.
 
 ## Required inputs
 
-MAP-Org is introduced in the
-[MuellerPT paper](https://arxiv.org/abs/2605.23840). A separate stable archive
-URL was not publicly indexed when this README was prepared; add that archive
-link here when it is released. The code expects the prepared, physically
-filtered MAP-Org arrays described below.
+Download MAP-Org from its
+[Zenodo record](https://doi.org/10.5281/zenodo.20274683). The code expects the
+prepared, physically filtered arrays described below.
 
 Place the `0902Measurement` files beneath
 `$MUELLERPT_INPUT_ROOT/filtered_matrices/0902Measurement`. Each Mueller input
@@ -34,7 +32,7 @@ The decomposition cache must contain `retardance`, `depolarization`, and
 
 ```bash
 export MUELLERPT_INPUT_ROOT=/path/to/prepared/data
-export MUELLERPT_OUTPUT_ROOT=/path/on/mounted/drive/MuellerPT_test
+export MUELLERPT_OUTPUT_ROOT=/path/on/mounted/drive/MuellerPT
 export PYTHON_BIN="$PWD/.venv/bin/python"
 
 "$PYTHON_BIN" pretraining/train_pretrain.py
@@ -49,6 +47,5 @@ It trains for 150 epochs and saves a checkpoint every 10 epochs beneath
 Portable paths and the run name are defined in `config_pretrain.py`; all
 method-defining values match the released checkpoint configuration.
 
-Pretraining uses random initialization, sampling, augmentation, and GPU kernels.
-Its loss trajectory and checkpoint weights are stochastic and are not expected
-to be bit-for-bit identical to the released run.
+See the main [reproducibility notes](../README.md#reproducibility-expectations)
+for the expected variation between training runs.

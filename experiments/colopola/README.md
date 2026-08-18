@@ -31,9 +31,9 @@ The launcher contains the exact 30 publication seeds and writes to:
 $MUELLERPT_OUTPUT_ROOT/results/colopola/paper_30_seed_sweep/
 ```
 
-The original experiment used `deterministic=False`. Retraining follows the same
-protocol, but the results are stochastic and are not expected to reproduce the
-reference values exactly.
+The original experiment used `deterministic=False`. See the main
+[reproducibility notes](../../README.md#reproducibility-expectations) for the
+expected variation between runs.
 
 Each seed produces one complete-test-set Accuracy, Sensitivity, and Specificity value. The table reports the equally weighted mean and sample standard deviation of those 30 seed-level values.
 

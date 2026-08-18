@@ -27,10 +27,9 @@ $MUELLERPT_OUTPUT_ROOT/results/polambrimetry/paper_nested_cv/
 
 The launcher uses `--resume`, allowing completed nested-CV entries to be retained after interruption.
 
-The deterministic controls are enabled where PyTorch supports them. Some CUDA
-operations only support warning mode, so freshly trained metrics can still vary
-with hardware and software versions and are not expected to match the reference
-values exactly.
+Deterministic controls are enabled where PyTorch supports them. See the main
+[reproducibility notes](../../README.md#reproducibility-expectations) for the
+remaining sources of variation.
 
 For each of six held-out test specimens, each of the other five specimens is used once for validation. The reported mean and sample standard deviation therefore use all 30 nested-CV test/validation pairs with equal weight.
 

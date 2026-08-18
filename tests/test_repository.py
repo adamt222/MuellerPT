@@ -54,7 +54,8 @@ def test_publication_metadata() -> None:
     assert "license: MIT" in citation_text
     assert "https://doi.org/10.5281/zenodo.10554304" in readme_text
     assert "dataset-detail?ds=DTS23011" in readme_text
-    assert "not expected to match" in readme_text
+    assert "Exact agreement" in readme_text
+    assert "with the reference values is therefore not expected." in readme_text
 
 
 def test_portable_default_paths() -> None:
